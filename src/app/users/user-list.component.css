@@ -1,0 +1,32 @@
+.userPhoto {
+    margin-top: 15px;
+    margin-right: 10px;
+    border-radius: 50%;
+    width: 80px;
+    border: 1px black solid;
+    float: left;
+}
+
+.namePhoto {
+    display: block;
+    font-size: 20px;
+}
+
+.emailPhoto {
+    font-weight:normal;
+    display: block;
+}
+
+.datePhoto {
+    display: block;
+    font-weight: normal;
+    color: grey;
+}
+
+.editarButton, .salvarButton {
+    margin-top: 15px;
+    width: 250px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+}
