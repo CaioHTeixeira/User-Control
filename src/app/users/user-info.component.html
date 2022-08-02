@@ -1,0 +1,28 @@
+<form #userForm="ngForm">
+    <div class="form-group" style="margin: 10px;">
+      <label for="nomeUsuario">Name</label>
+      <input type="text" class="form-control" id="nomeUsuario" name="nomeUsuario" #nomeUsuario="ngModel" 
+        [ngClass]="{'is-invalid' : nomeUsuario.invalid}" [(ngModel)]="user.name" required>
+      <div class="invalid-feedback">
+        <span>Name is required</span>
+      </div>
+    </div>
+    <div class="form-group" style="margin: 10px;">
+      <label for="emailUsuario">Email</label>
+      <input type="email" class="form-control" id="emailUsuario" name="emailUsuario" #emailUsuario="ngModel" 
+        [ngClass]="{'is-invalid' : emailUsuario.invalid}" [(ngModel)]="user.email" required>
+      <div class="invalid-feedback">
+        <span>email is required</span>
+      </div>  
+    </div>
+    <div class="form-group" style="margin: 10px;">
+        <label for="siteUsuario">Site</label>
+        <input type="text" class="form-control" id="siteUsuario" name="siteUsuario" #siteUsuario="ngModel" 
+            [ngClass]="{'is-invalid' : siteUsuario.invalid }" [(ngModel)]="user.site" required>
+        <div class="invalid-feedback">
+            <span>Site is required</span>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="editUser(user)" style="margin: 10px;">Edit</button>
+    <button class="btn btn-secondary" [routerLink]="['/users']" style="margin: 10px;">Back</button>
+</form>

@@ -1,0 +1,36 @@
+<form #userAddForm="ngForm">
+    <div class="form-group" style="margin: 10px;">
+      <label for="userName">Name</label>
+      <input type="text" class="form-control" id="userName" name="userName" #userName="ngModel" 
+        [ngClass]="{'is-invalid' : userName.invalid}" [(ngModel)]="user.name" required>
+      <div class="invalid-feedback">
+        <span>Name is required</span>
+      </div>
+    </div>
+    <div class="form-group" style="margin: 10px;">
+      <label for="userEmail">Email</label>
+      <input type="email" class="form-control" id="userEmail" name="userEmail" #userEmail="ngModel" 
+        [ngClass]="{'is-invalid' : userEmail.invalid}" [(ngModel)]="user.email" required>
+      <div class="invalid-feedback">
+        <span>email is required</span>
+      </div>  
+    </div>
+    <div class="form-group" style="margin: 10px;">
+        <label for="siteUsuario">Site</label>
+        <input type="text" class="form-control" id="siteUsuario" name="siteUsuario" #siteUsuario="ngModel" 
+            [ngClass]="{'is-invalid' : siteUsuario.invalid }" [(ngModel)]="user.site" required>
+        <div class="invalid-feedback">
+            <span>Site is required</span>
+        </div>
+    </div>
+    <div class="form-group" style="margin: 10px;">
+        <label for="registerDateUsuario">Register Date</label>
+        <input type="date" class="form-control" id="registerDateUsuario" name="registerDateUsuario" 
+            #registerDateUsuario="ngModel" [ngClass]="{'is-invalid' : registerDateUsuario.invalid }" [(ngModel)]="user.registerDate" required>
+        <div class="invalid-feedback">
+            <span>Register Date is required</span>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="saveUser()" style="margin: 10px;">Save</button>
+    <button class="btn btn-secondary" [routerLink]="['/users']" style="margin: 10px;">Back</button>
+</form>

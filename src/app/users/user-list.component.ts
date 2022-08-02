@@ -9,7 +9,7 @@ import { UserService } from "./userService";
 
 export class UserListComponent implements OnInit{
 
-    _users: User[] = [];
+    users: User[] = [];
     
     constructor(private userService: UserService) {}
 
@@ -19,10 +19,19 @@ export class UserListComponent implements OnInit{
 
     retrieveAll(): void {
         this.userService.retrieveAll().subscribe({
-            next: users => this._users = users,
+            next: users => this.users = users,
             error: err => console.log('Error', err)
         })
     }
     
+    excludeUser(id: number) {
+        this.userService.excludeUser(id).subscribe({
+            next: user => {
+                console.log('User removed with success');
+                this.retrieveAll();
+            },
+            error: err => console.log('Error', err)
+        })
+    }
 }
 
