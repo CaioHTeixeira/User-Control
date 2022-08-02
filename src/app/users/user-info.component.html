@@ -23,6 +23,6 @@
             <span>Site is required</span>
         </div>
     </div>
-    <button type="submit" class="btn btn-primary" (click)="editUser(user)" style="margin: 10px;">Edit</button>
+    <button type="submit" class="btn btn-primary" [disabled]="userForm.invalid" (click)="editUser(user)" style="margin: 10px;">Edit</button>
     <button class="btn btn-secondary" [routerLink]="['/users']" style="margin: 10px;">Back</button>
 </form>

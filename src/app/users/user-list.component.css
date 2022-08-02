@@ -5,6 +5,7 @@
     width: 80px;
     border: 1px black solid;
     float: left;
+    max-width: 100%;
 }
 
 .namePhoto {

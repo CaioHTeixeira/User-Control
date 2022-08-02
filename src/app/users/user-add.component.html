@@ -31,6 +31,6 @@
             <span>Register Date is required</span>
         </div>
     </div>
-    <button type="submit" class="btn btn-primary" (click)="saveUser()" style="margin: 10px;">Save</button>
+    <button type="submit" class="btn btn-primary" [disabled]="userAddForm.invalid" (click)="saveUser()" style="margin: 10px;">Save</button>
     <button class="btn btn-secondary" [routerLink]="['/users']" style="margin: 10px;">Back</button>
 </form>
