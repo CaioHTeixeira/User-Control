@@ -1,0 +1,21 @@
+.addPhoto {
+    margin: auto;
+    text-align: center;
+}
+
+#photoUsuario {
+    display: block;
+    margin: 10px auto;
+    border-radius: 50%;
+    width: 80px;
+    border: 1px black solid;
+    max-width: 100%;
+}
+
+.labelPhoto {
+    display: block;
+    margin: 10px auto;
+    font-size: small;
+    width: 110px;
+    height: 30px;
+}
